@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 372
+  Left = 517
   Height = 829
-  Top = 347
+  Top = 212
   Width = 1574
   Caption = 'Form1'
   ClientHeight = 829
@@ -13,12 +13,13 @@ object Form1: TForm1
     Height = 805
     Top = 24
     Width = 460
+    Brush.Color = 14194251
   end
   object ComboBox1: TComboBox
-    Left = 72
+    Left = 32
     Height = 33
-    Top = 80
-    Width = 150
+    Top = 104
+    Width = 384
     ItemHeight = 25
     Items.Strings = (
       'TC'
@@ -31,6 +32,110 @@ object Form1: TForm1
       'GI'
     )
     TabOrder = 0
-    Text = 'Listes UEs'
+    Text = 'Gestion des UE'
+  end
+  object ComboBox2: TComboBox
+    Left = 32
+    Height = 33
+    Top = 152
+    Width = 384
+    ItemHeight = 25
+    Items.Strings = (
+      'TC'
+      'ISI'
+      'RT'
+      'A2I'
+      'MM'
+      'MTE'
+      'GM'
+      'GI'
+    )
+    TabOrder = 1
+    Text = 'Gestion des enseignants'
+  end
+  object ComboBox3: TComboBox
+    Left = 32
+    Height = 33
+    Top = 200
+    Width = 382
+    ItemHeight = 25
+    Items.Strings = (
+      'TC'
+      'ISI'
+      'RT'
+      'A2I'
+      'MM'
+      'MTE'
+      'GM'
+      'GI'
+    )
+    TabOrder = 2
+    Text = 'Visualisation de la répartition des étudiants'
+  end
+  object ComboBox4: TComboBox
+    Left = 32
+    Height = 33
+    Top = 248
+    Width = 382
+    ItemHeight = 25
+    Items.Strings = (
+      'TC'
+      'ISI'
+      'RT'
+      'A2I'
+      'MM'
+      'MTE'
+      'GM'
+      'GI'
+    )
+    TabOrder = 3
+    Text = 'Gestion du semestre'
+  end
+  object ComboBox5: TComboBox
+    Left = 32
+    Height = 33
+    Top = 296
+    Width = 382
+    ItemHeight = 25
+    Items.Strings = (
+      'TC'
+      'ISI'
+      'RT'
+      'A2I'
+      'MM'
+      'MTE'
+      'GM'
+      'GI'
+    )
+    TabOrder = 4
+    Text = 'Statistique des flux'
+  end
+  object Shape2: TShape
+    Left = 456
+    Height = 805
+    Top = 24
+    Width = 352
+    Brush.Color = 16760178
+  end
+  object Shape3: TShape
+    Left = 800
+    Height = 805
+    Top = 24
+    Width = 768
+  end
+  object Label1: TLabel
+    Left = 40
+    Height = 59
+    Top = 32
+    Width = 373
+    Caption = 'MENU PRINCIPAL'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -44
+    Font.Name = '@Arial Unicode MS'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+    OnClick = Label1Click
   end
 end

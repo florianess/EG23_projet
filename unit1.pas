@@ -18,7 +18,12 @@ type
     ComboBox3: TComboBox;
     ComboBox4: TComboBox;
     ComboBox5: TComboBox;
+    Label1: TLabel;
     Shape1: TShape;
+    Shape2: TShape;
+    Shape3: TShape;
+    procedure Label1Click(Sender: TObject);
+    procedure StaticText1Click(Sender: TObject);
   private
 
   public
@@ -31,6 +36,18 @@ var
 implementation
 
 {$R *.lfm}
+
+{ TForm1 }
+
+procedure TForm1.StaticText1Click(Sender: TObject);
+begin
+
+end;
+
+procedure TForm1.Label1Click(Sender: TObject);
+begin
+
+end;
 
 end.
 
