@@ -1,11 +1,11 @@
 object Form1: TForm1
-  Left = 517
+  Left = 213
   Height = 829
-  Top = 212
+  Top = 33
   Width = 1574
   Caption = 'Form1'
-  ClientHeight = 829
-  ClientWidth = 1574
+  ClientHeight = 0
+  ClientWidth = 0
   DesignTimePPI = 144
   LCLVersion = '1.8.2.0'
   object Shape1: TShape
@@ -31,6 +31,7 @@ object Form1: TForm1
       'GM'
       'GI'
     )
+    OnChange = ComboBox1Change
     TabOrder = 0
     Text = 'Gestion des UE'
   end
@@ -50,6 +51,7 @@ object Form1: TForm1
       'GM'
       'GI'
     )
+    OnChange = ComboBox2Change
     TabOrder = 1
     Text = 'Gestion des enseignants'
   end
@@ -69,6 +71,7 @@ object Form1: TForm1
       'GM'
       'GI'
     )
+    OnChange = ComboBox3Change
     TabOrder = 2
     Text = 'Visualisation de la répartition des étudiants'
   end
@@ -88,6 +91,7 @@ object Form1: TForm1
       'GM'
       'GI'
     )
+    OnChange = ComboBox4Change
     TabOrder = 3
     Text = 'Gestion du semestre'
   end
@@ -107,6 +111,7 @@ object Form1: TForm1
       'GM'
       'GI'
     )
+    OnChange = ComboBox5Change
     TabOrder = 4
     Text = 'Statistique des flux'
   end
@@ -136,6 +141,94 @@ object Form1: TForm1
     Font.Quality = fqDraft
     ParentColor = False
     ParentFont = False
-    OnClick = Label1Click
+  end
+  object ListeUETC: TRadioGroup
+    Left = 808
+    Height = 752
+    Top = 40
+    Width = 318
+    AutoFill = True
+    Caption = 'UE TC'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 722
+    ClientWidth = 314
+    Items.Strings = (
+      'CHMA01'
+      'CHMA02'
+      'CHMA03'
+      'CHMA04'
+      'MATH01'
+      'MATH02'
+      'MATH03'
+      'MATH04'
+      'PHYS01'
+      'PHYS02'
+      'PHYS03'
+      'PHYS04'
+      'TN01'
+      'TN02'
+      'TN04'
+      'TNEV'
+      'SI10'
+      'EN01'
+      'EN03'
+      'NF02'
+      'NF04'
+      'NF05'
+      'MS11'
+      'GL01'
+      'C2i1'
+      'MM01'
+    )
+    TabOrder = 5
+    Visible = False
+  end
+  object ListeSemestre: TRadioGroup
+    Left = 480
+    Height = 752
+    Top = 40
+    Width = 278
+    AutoFill = True
+    Caption = 'Semestre'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 722
+    ClientWidth = 274
+    Items.Strings = (
+      'P18'
+      'A17'
+      'P17'
+      'A16'
+      'P16'
+      'A15'
+      'P15'
+      'A14'
+      'P14'
+      'A13'
+      'P13'
+      'A12'
+      'P12'
+      'A11'
+      'P11'
+      'A10'
+      'P10'
+      'A09'
+      'P09'
+      'A08'
+      'P08'
+    )
+    TabOrder = 6
+    Visible = False
   end
 end
