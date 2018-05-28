@@ -47,6 +47,10 @@ implementation
 
 procedure TForm1.ComboBox1Change(Sender: TObject);
 begin //GESTION UE
+  ComboBox2.Text:='Gestion des enseignants';
+  ComboBox3.Text:='Visualisation de la répartition des étudiants';
+  ComboBox4.Text:='Gestion du semestre';
+  ComboBox5.Text:='Statistique des flux';
   case ComboBox1.ItemIndex of
        0: begin
           ListeUETC.Visible:=True ;
@@ -64,7 +68,11 @@ end;
 
 procedure TForm1.ComboBox2Change(Sender: TObject);
 begin  //GESTION ENSEIGNANTS
-    case ComboBox1.ItemIndex of
+  ComboBox1.Text:='Gestion des UE';
+  ComboBox3.Text:='Visualisation de la répartition des étudiants';
+  ComboBox4.Text:='Gestion du semestre';
+  ComboBox5.Text:='Statistique des flux';
+    case ComboBox3.ItemIndex of
        0: ; //TC
        1: ; //ISI
        2: ; //RT
@@ -78,6 +86,10 @@ end;
 
 procedure TForm1.ComboBox3Change(Sender: TObject);
 begin  //VISUALISATION REPARTITION ETU
+  ComboBox1.Text:='Gestion des UE';
+  ComboBox2.Text:='Gestion des enseignants';
+  ComboBox4.Text:='Gestion du semestre';
+  ComboBox5.Text:='Statistique des flux';
     ListeSemestre.Visible:= True;
     ListeUETC.Visible:=False;
     case ComboBox1.ItemIndex of
@@ -94,6 +106,10 @@ end;
 
 procedure TForm1.ComboBox4Change(Sender: TObject);
 begin  //GESTION DU SEMESTRE
+  ComboBox1.Text:='Gestion des UE';
+  ComboBox2.Text:='Gestion des enseignants';
+  ComboBox3.Text:='Visualisation de la répartition des étudiants';
+  ComboBox5.Text:='Statistique des flux';
     ListeSemestre.Visible:= True;
     ListeUETC.Visible:=False;
     case ComboBox1.ItemIndex of
@@ -110,6 +126,10 @@ end;
 
 procedure TForm1.ComboBox5Change(Sender: TObject);
 begin  //STATISTIQUE DE FLUX
+  ComboBox1.Text:='Gestion des UE';
+  ComboBox2.Text:='Gestion des enseignants';
+  ComboBox3.Text:='Visualisation de la répartition des étudiants';
+  ComboBox4.Text:='Gestion du semestre';
     ListeSemestre.Visible:= True;
     ListeUETC.Visible:=False;
     case ComboBox1.ItemIndex of

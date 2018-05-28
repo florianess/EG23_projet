@@ -1,26 +1,25 @@
 object Form1: TForm1
-  Left = -11
-  Height = 1000
-  Top = -11
-  Width = 1920
+  Left = 286
+  Height = 806
+  Top = 77
+  Width = 1567
   Caption = 'Form1'
-  ClientHeight = 1000
-  ClientWidth = 1920
-  DesignTimePPI = 144
+  ClientHeight = 806
+  ClientWidth = 1567
   LCLVersion = '1.8.2.0'
   object Shape1: TShape
     Left = 0
     Height = 805
-    Top = 24
+    Top = 0
     Width = 460
     Brush.Color = 14194251
   end
   object ComboBox1: TComboBox
-    Left = 32
-    Height = 33
-    Top = 104
+    Left = 40
+    Height = 23
+    Top = 200
     Width = 384
-    ItemHeight = 25
+    ItemHeight = 15
     Items.Strings = (
       'TC'
       'ISI'
@@ -36,11 +35,11 @@ object Form1: TForm1
     Text = 'Gestion des UE'
   end
   object ComboBox2: TComboBox
-    Left = 32
-    Height = 33
-    Top = 152
+    Left = 40
+    Height = 23
+    Top = 248
     Width = 384
-    ItemHeight = 25
+    ItemHeight = 15
     Items.Strings = (
       'TC'
       'ISI'
@@ -56,11 +55,11 @@ object Form1: TForm1
     Text = 'Gestion des enseignants'
   end
   object ComboBox3: TComboBox
-    Left = 32
-    Height = 33
-    Top = 200
+    Left = 40
+    Height = 23
+    Top = 296
     Width = 382
-    ItemHeight = 25
+    ItemHeight = 15
     Items.Strings = (
       'TC'
       'ISI'
@@ -76,11 +75,11 @@ object Form1: TForm1
     Text = 'Visualisation de la répartition des étudiants'
   end
   object ComboBox4: TComboBox
-    Left = 32
-    Height = 33
-    Top = 248
+    Left = 40
+    Height = 23
+    Top = 344
     Width = 382
-    ItemHeight = 25
+    ItemHeight = 15
     Items.Strings = (
       'TC'
       'ISI'
@@ -96,11 +95,11 @@ object Form1: TForm1
     Text = 'Gestion du semestre'
   end
   object ComboBox5: TComboBox
-    Left = 32
-    Height = 33
-    Top = 296
+    Left = 40
+    Height = 23
+    Top = 392
     Width = 382
-    ItemHeight = 25
+    ItemHeight = 15
     Items.Strings = (
       'TC'
       'ISI'
@@ -118,21 +117,21 @@ object Form1: TForm1
   object Shape2: TShape
     Left = 456
     Height = 805
-    Top = 24
+    Top = 0
     Width = 352
     Brush.Color = 16760178
   end
   object Shape3: TShape
     Left = 800
     Height = 805
-    Top = 24
+    Top = 0
     Width = 768
   end
   object Label1: TLabel
     Left = 40
-    Height = 59
+    Height = 60
     Top = 32
-    Width = 373
+    Width = 356
     Caption = 'MENU PRINCIPAL'
     Font.CharSet = ANSI_CHARSET
     Font.Height = -44
@@ -143,7 +142,7 @@ object Form1: TForm1
     ParentFont = False
   end
   object ListeUETC: TRadioGroup
-    Left = 808
+    Left = 832
     Height = 752
     Top = 40
     Width = 318
@@ -156,7 +155,7 @@ object Form1: TForm1
     ChildSizing.ShrinkVertical = crsScaleChilds
     ChildSizing.Layout = cclLeftToRightThenTopToBottom
     ChildSizing.ControlsPerLine = 1
-    ClientHeight = 722
+    ClientHeight = 732
     ClientWidth = 314
     Items.Strings = (
       'CHMA01'
@@ -203,7 +202,7 @@ object Form1: TForm1
     ChildSizing.ShrinkVertical = crsScaleChilds
     ChildSizing.Layout = cclLeftToRightThenTopToBottom
     ChildSizing.ControlsPerLine = 1
-    ClientHeight = 722
+    ClientHeight = 732
     ClientWidth = 274
     Items.Strings = (
       'P18'
