@@ -21,6 +21,13 @@ type
     Label1: TLabel;
     ListeSemestre: TRadioGroup;   //Liste semestre
     ListeUETC: TRadioGroup;   //Liste UE TC
+    ListeUEGI: TRadioGroup;
+    ListeUEMTE: TRadioGroup;
+    ListeUEGM: TRadioGroup;
+    ListeUEISI: TRadioGroup;
+    ListeUERT: TRadioGroup;
+    ListeUEA2I: TRadioGroup;
+    ListeUEMM: TRadioGroup;
     Shape1: TShape;
     Shape2: TShape;
     Shape3: TShape;
@@ -29,6 +36,7 @@ type
     procedure ComboBox3Change(Sender: TObject);
     procedure ComboBox4Change(Sender: TObject);
     procedure ComboBox5Change(Sender: TObject);
+    procedure ListeUEGIClick(Sender: TObject);
 
   private
 
@@ -45,6 +53,20 @@ implementation
 
 { TForm1 }
 
+procedure Clear(); //On fait disparaitre toutes les RadioGroup
+begin
+
+     Form1.ListeSemestre.Visible:=False;
+     Form1.ListeUEGI.Visible:=False;
+     Form1.ListeUEGM.Visible:=False;
+     Form1.ListeUEISI.Visible:=False;
+     Form1.ListeUERT.Visible:=False;
+     Form1.ListeUEMTE.Visible:=False;
+     Form1.ListeUEA2I.Visible:=False;
+     Form1.ListeUEMM.Visible:=False;
+
+end;
+
 procedure TForm1.ComboBox1Change(Sender: TObject);
 begin //GESTION UE
   ComboBox2.Text:='Gestion des enseignants';
@@ -53,11 +75,14 @@ begin //GESTION UE
   ComboBox5.Text:='Statistique des flux';
   case ComboBox1.ItemIndex of
        0: begin
-          ListeUETC.Visible:=True ;
-          ListeSemestre.Visible:=False; //TC
+          Clear();
+          ListeUETC.Visible:=True ; //TC
        end ;
-       1: ; //ISI
-       2: ; //RT
+       1: begin
+          Clear();
+          ListeUEISI.Visible:=True;
+       end; //ISI
+       2: Clear(); //RT
        3: ; //A2I
        4: ; //MM
        5: ; //MTE
@@ -142,6 +167,11 @@ begin  //STATISTIQUE DE FLUX
        6: ; //GM
        7: ; //GI
   end;
+end;
+
+procedure TForm1.ListeUEGIClick(Sender: TObject);
+begin
+
 end;
 
 end.
