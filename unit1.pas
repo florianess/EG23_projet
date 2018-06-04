@@ -30,7 +30,6 @@ type
     ListeUEMM: TRadioGroup;
     Shape1: TShape;
     Shape2: TShape;
-    Shape3: TShape;
     procedure ComboBox1Change(Sender: TObject);
     procedure ComboBox2Change(Sender: TObject);
     procedure ComboBox3Change(Sender: TObject);
@@ -65,6 +64,7 @@ begin
      Form1.ListeUEMTE.Visible:=False;
      Form1.ListeUEA2I.Visible:=False;
      Form1.ListeUEMM.Visible:=False;
+     Form1.Shape2.Visible:=False;
 
 end;
 
@@ -77,18 +77,32 @@ begin //GESTION UE
   case ComboBox1.ItemIndex of
        0: begin
           Clear();
+          Shape2.Visible:=True;
           ListeUETC.Visible:=True ; //TC
        end ;
        1: begin
           Clear();
+          Shape2.Visible:=True;
           ListeUEISI.Visible:=True;
        end; //ISI
        2: Clear(); //RT
        3: ; //A2I
        4: ; //MM
-       5: ; //MTE
-       6: ; //GM
-       7: ; //GI
+       5: begin
+          Clear();
+          Shape2.Visible:=True;
+          ListeUEMTE.Visible:=True;
+       end; //MTE
+       6: begin
+          Clear();
+          Shape2.Visible:=True;
+          ListeUEGM.Visible:=True;
+       end; //GM
+       7: begin
+          Clear();
+          Shape2.Visible:=True;
+          ListeUEGI.Visible:=True;
+       end; //GI
   end;
 end;
 

@@ -1,12 +1,11 @@
 object Form1: TForm1
-  Left = 210
+  Left = 269
   Height = 806
-  Top = 371
+  Top = 131
   Width = 1567
   Caption = 'Form1'
   ClientHeight = 806
   ClientWidth = 1567
-  DesignTimePPI = 144
   LCLVersion = '1.8.2.0'
   object Shape1: TShape
     Left = 0
@@ -17,10 +16,10 @@ object Form1: TForm1
   end
   object ComboBox1: TComboBox
     Left = 40
-    Height = 33
-    Top = 200
+    Height = 23
+    Top = 248
     Width = 384
-    ItemHeight = 25
+    ItemHeight = 15
     Items.Strings = (
       'TC'
       'ISI'
@@ -37,19 +36,15 @@ object Form1: TForm1
   end
   object ComboBox2: TComboBox
     Left = 40
-    Height = 33
-    Top = 248
+    Height = 23
+    Top = 200
     Width = 384
-    ItemHeight = 25
+    ItemHeight = 15
     Items.Strings = (
-      'TC'
-      'ISI'
-      'RT'
-      'A2I'
-      'MM'
-      'MTE'
-      'GM'
-      'GI'
+      'HOMME, ENVIRONNEMENT ET TECHNOLOGIE DE L''INFORMATION ET DE LA COMMUNICATION'
+      'PHYSIQUE, MECANIQUE, MATERIAUX ET NANOTECHNOLOGIE'
+      'RECHERCHE OPERATIONNELLE, STATISTIQUES APPLIQUEES ET SIMULATION'
+      ''
     )
     OnChange = ComboBox2Change
     TabOrder = 1
@@ -57,10 +52,10 @@ object Form1: TForm1
   end
   object ComboBox3: TComboBox
     Left = 40
-    Height = 33
+    Height = 23
     Top = 296
     Width = 382
-    ItemHeight = 25
+    ItemHeight = 15
     Items.Strings = (
       'TC'
       'ISI'
@@ -77,10 +72,10 @@ object Form1: TForm1
   end
   object ComboBox4: TComboBox
     Left = 40
-    Height = 33
+    Height = 23
     Top = 344
     Width = 382
-    ItemHeight = 25
+    ItemHeight = 15
     Items.Strings = (
       'TC'
       'ISI'
@@ -97,10 +92,10 @@ object Form1: TForm1
   end
   object ComboBox5: TComboBox
     Left = 40
-    Height = 33
+    Height = 23
     Top = 392
     Width = 382
-    ItemHeight = 25
+    ItemHeight = 15
     Items.Strings = (
       'TC'
       'ISI'
@@ -121,18 +116,13 @@ object Form1: TForm1
     Top = 0
     Width = 352
     Brush.Color = 16760178
-  end
-  object Shape3: TShape
-    Left = 800
-    Height = 805
-    Top = 0
-    Width = 768
+    Visible = False
   end
   object Label1: TLabel
     Left = 40
-    Height = 59
+    Height = 60
     Top = 32
-    Width = 373
+    Width = 356
     Caption = 'MENU PRINCIPAL'
     Font.CharSet = ANSI_CHARSET
     Font.Height = -44
@@ -143,10 +133,10 @@ object Form1: TForm1
     ParentFont = False
   end
   object ListeUETC: TRadioGroup
-    Left = 832
+    Left = 472
     Height = 752
-    Top = 40
-    Width = 318
+    Top = 47
+    Width = 286
     AutoFill = True
     Caption = 'UE TC'
     ChildSizing.LeftRightSpacing = 6
@@ -156,8 +146,8 @@ object Form1: TForm1
     ChildSizing.ShrinkVertical = crsScaleChilds
     ChildSizing.Layout = cclLeftToRightThenTopToBottom
     ChildSizing.ControlsPerLine = 1
-    ClientHeight = 722
-    ClientWidth = 314
+    ClientHeight = 732
+    ClientWidth = 282
     Items.Strings = (
       'CHMA01'
       'CHMA02'
@@ -203,7 +193,7 @@ object Form1: TForm1
     ChildSizing.ShrinkVertical = crsScaleChilds
     ChildSizing.Layout = cclLeftToRightThenTopToBottom
     ChildSizing.ControlsPerLine = 1
-    ClientHeight = 722
+    ClientHeight = 732
     ClientWidth = 274
     Items.Strings = (
       'P18'
@@ -232,9 +222,9 @@ object Form1: TForm1
     Visible = False
   end
   object ListeUEGI: TRadioGroup
-    Left = 1246
-    Height = 158
-    Top = 200
+    Left = 480
+    Height = 552
+    Top = 40
     Width = 278
     AutoFill = True
     Caption = 'UE GI'
@@ -245,7 +235,7 @@ object Form1: TForm1
     ChildSizing.ShrinkVertical = crsScaleChilds
     ChildSizing.Layout = cclLeftToRightThenTopToBottom
     ChildSizing.ControlsPerLine = 1
-    ClientHeight = 128
+    ClientHeight = 532
     ClientWidth = 274
     Items.Strings = (
       'MT12'
@@ -273,9 +263,9 @@ object Form1: TForm1
     Visible = False
   end
   object ListeUEMTE: TRadioGroup
-    Left = 1248
-    Height = 158
-    Top = 102
+    Left = 482
+    Height = 737
+    Top = 55
     Width = 278
     AutoFill = True
     Caption = 'UE MTE'
@@ -286,7 +276,7 @@ object Form1: TForm1
     ChildSizing.ShrinkVertical = crsScaleChilds
     ChildSizing.Layout = cclLeftToRightThenTopToBottom
     ChildSizing.ControlsPerLine = 1
-    ClientHeight = 128
+    ClientHeight = 717
     ClientWidth = 274
     Items.Strings = (
       'MT12'
@@ -325,8 +315,8 @@ object Form1: TForm1
     Visible = False
   end
   object ListeUEGM: TRadioGroup
-    Left = 1222
-    Height = 158
+    Left = 472
+    Height = 721
     Top = 47
     Width = 278
     AutoFill = True
@@ -338,7 +328,7 @@ object Form1: TForm1
     ChildSizing.ShrinkVertical = crsScaleChilds
     ChildSizing.Layout = cclLeftToRightThenTopToBottom
     ChildSizing.ControlsPerLine = 1
-    ClientHeight = 128
+    ClientHeight = 701
     ClientWidth = 274
     Items.Strings = (
       'MQ01 '
@@ -369,10 +359,10 @@ object Form1: TForm1
     Visible = False
   end
   object ListeUEISI: TRadioGroup
-    Left = 1064
-    Height = 448
-    Top = 56
-    Width = 302
+    Left = 472
+    Height = 697
+    Top = 47
+    Width = 288
     AutoFill = True
     Caption = 'UE ISI'
     ChildSizing.LeftRightSpacing = 6
@@ -382,8 +372,8 @@ object Form1: TForm1
     ChildSizing.ShrinkVertical = crsScaleChilds
     ChildSizing.Layout = cclLeftToRightThenTopToBottom
     ChildSizing.ControlsPerLine = 1
-    ClientHeight = 418
-    ClientWidth = 298
+    ClientHeight = 677
+    ClientWidth = 284
     Items.Strings = (
       'NF16'
       'NF20'
@@ -412,9 +402,9 @@ object Form1: TForm1
     Visible = False
   end
   object ListeUERT: TRadioGroup
-    Left = 1409
+    Left = 1184
     Height = 158
-    Top = 473
+    Top = 472
     Width = 278
     AutoFill = True
     Caption = 'UE RT'
