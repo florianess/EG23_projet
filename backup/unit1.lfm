@@ -1,22 +1,23 @@
 object Form1: TForm1
-  Left = 200
-  Height = 806
-  Top = 312
-  Width = 1567
+  Left = 758
+  Height = 1029
+  Top = 23
+  Width = 1523
   Caption = 'Form1'
-  ClientHeight = 806
-  ClientWidth = 1567
+  ClientHeight = 1029
+  ClientWidth = 1523
   DesignTimePPI = 144
   LCLVersion = '1.8.2.0'
+  WindowState = wsFullScreen
   object Shape1: TShape
     Left = 0
     Height = 805
     Top = 0
-    Width = 460
+    Width = 412
     Brush.Color = 14194251
   end
   object ComboBox1: TComboBox
-    Left = 40
+    Left = 16
     Height = 33
     Top = 248
     Width = 384
@@ -36,7 +37,7 @@ object Form1: TForm1
     Text = 'Gestion des UE'
   end
   object ComboBox2: TComboBox
-    Left = 40
+    Left = 16
     Height = 33
     Top = 200
     Width = 384
@@ -52,7 +53,7 @@ object Form1: TForm1
     Text = 'Gestion des enseignants'
   end
   object ComboBox3: TComboBox
-    Left = 40
+    Left = 16
     Height = 33
     Top = 296
     Width = 382
@@ -72,7 +73,7 @@ object Form1: TForm1
     Text = 'Visualisation de la répartition des étudiants'
   end
   object ComboBox4: TComboBox
-    Left = 40
+    Left = 16
     Height = 33
     Top = 344
     Width = 382
@@ -92,7 +93,7 @@ object Form1: TForm1
     Text = 'Gestion du semestre'
   end
   object ComboBox5: TComboBox
-    Left = 40
+    Left = 16
     Height = 33
     Top = 392
     Width = 382
@@ -112,15 +113,15 @@ object Form1: TForm1
     Text = 'Statistique des flux'
   end
   object FondBleuClair: TShape
-    Left = 456
+    Left = 408
     Height = 805
     Top = 0
-    Width = 352
+    Width = 152
     Brush.Color = 16760178
     Visible = False
   end
   object Label1: TLabel
-    Left = 40
+    Left = 16
     Height = 59
     Top = 32
     Width = 373
@@ -134,10 +135,10 @@ object Form1: TForm1
     ParentFont = False
   end
   object ListeUETC: TRadioGroup
-    Left = 472
+    Left = 424
     Height = 752
-    Top = 47
-    Width = 286
+    Top = 32
+    Width = 112
     AutoFill = True
     Caption = 'UE TC'
     ChildSizing.LeftRightSpacing = 6
@@ -148,7 +149,7 @@ object Form1: TForm1
     ChildSizing.Layout = cclLeftToRightThenTopToBottom
     ChildSizing.ControlsPerLine = 1
     ClientHeight = 722
-    ClientWidth = 282
+    ClientWidth = 108
     Items.Strings = (
       'CHMA01'
       'CHMA02'
@@ -181,10 +182,10 @@ object Form1: TForm1
     Visible = False
   end
   object ListeSemestre: TRadioGroup
-    Left = 480
+    Left = 424
     Height = 752
-    Top = 40
-    Width = 278
+    Top = 32
+    Width = 94
     AutoFill = True
     Caption = 'Semestre'
     ChildSizing.LeftRightSpacing = 6
@@ -195,7 +196,7 @@ object Form1: TForm1
     ChildSizing.Layout = cclLeftToRightThenTopToBottom
     ChildSizing.ControlsPerLine = 1
     ClientHeight = 722
-    ClientWidth = 274
+    ClientWidth = 90
     Items.Strings = (
       'P18'
       'A17'
@@ -223,10 +224,10 @@ object Form1: TForm1
     Visible = False
   end
   object ListeUEGI: TRadioGroup
-    Left = 480
+    Left = 424
     Height = 552
-    Top = 40
-    Width = 278
+    Top = 32
+    Width = 96
     AutoFill = True
     Caption = 'UE GI'
     ChildSizing.LeftRightSpacing = 6
@@ -237,7 +238,7 @@ object Form1: TForm1
     ChildSizing.Layout = cclLeftToRightThenTopToBottom
     ChildSizing.ControlsPerLine = 1
     ClientHeight = 522
-    ClientWidth = 274
+    ClientWidth = 92
     Items.Strings = (
       'MT12'
       'SY02'
@@ -259,15 +260,14 @@ object Form1: TForm1
       'GP27'
       'SY06'
     )
-    OnClick = ListeUEGIClick
     TabOrder = 7
     Visible = False
   end
   object ListeUEMTE: TRadioGroup
-    Left = 482
+    Left = 424
     Height = 737
-    Top = 55
-    Width = 278
+    Top = 32
+    Width = 96
     AutoFill = True
     Caption = 'UE MTE'
     ChildSizing.LeftRightSpacing = 6
@@ -278,7 +278,7 @@ object Form1: TForm1
     ChildSizing.Layout = cclLeftToRightThenTopToBottom
     ChildSizing.ControlsPerLine = 1
     ClientHeight = 707
-    ClientWidth = 274
+    ClientWidth = 92
     Items.Strings = (
       'MT12'
       'NF16'
@@ -316,10 +316,10 @@ object Form1: TForm1
     Visible = False
   end
   object ListeUEGM: TRadioGroup
-    Left = 472
+    Left = 424
     Height = 721
-    Top = 47
-    Width = 278
+    Top = 32
+    Width = 98
     AutoFill = True
     Caption = 'UE GM'
     ChildSizing.LeftRightSpacing = 6
@@ -330,7 +330,7 @@ object Form1: TForm1
     ChildSizing.Layout = cclLeftToRightThenTopToBottom
     ChildSizing.ControlsPerLine = 1
     ClientHeight = 691
-    ClientWidth = 274
+    ClientWidth = 94
     Items.Strings = (
       'MQ01 '
       'MQ03'
@@ -360,10 +360,10 @@ object Form1: TForm1
     Visible = False
   end
   object ListeUEISI: TRadioGroup
-    Left = 472
+    Left = 424
     Height = 697
-    Top = 47
-    Width = 288
+    Top = 32
+    Width = 98
     AutoFill = True
     Caption = 'UE ISI'
     ChildSizing.LeftRightSpacing = 6
@@ -374,7 +374,7 @@ object Form1: TForm1
     ChildSizing.Layout = cclLeftToRightThenTopToBottom
     ChildSizing.ControlsPerLine = 1
     ClientHeight = 667
-    ClientWidth = 284
+    ClientWidth = 94
     Items.Strings = (
       'NF16'
       'NF20'
@@ -399,14 +399,15 @@ object Form1: TForm1
       'IF05'
       'IF26'
     )
+    OnClick = ListeUEISIClick
     TabOrder = 10
     Visible = False
   end
   object ListeUERT: TRadioGroup
-    Left = 472
+    Left = 424
     Height = 518
-    Top = 47
-    Width = 278
+    Top = 32
+    Width = 98
     AutoFill = True
     Caption = 'UE RT'
     ChildSizing.LeftRightSpacing = 6
@@ -417,7 +418,7 @@ object Form1: TForm1
     ChildSizing.Layout = cclLeftToRightThenTopToBottom
     ChildSizing.ControlsPerLine = 1
     ClientHeight = 488
-    ClientWidth = 274
+    ClientWidth = 94
     Items.Strings = (
       'MT12'
       'NF16'
@@ -442,10 +443,10 @@ object Form1: TForm1
     Visible = False
   end
   object ListeUEMM: TRadioGroup
-    Left = 472
+    Left = 424
     Height = 582
-    Top = 47
-    Width = 286
+    Top = 32
+    Width = 96
     AutoFill = True
     Caption = 'UE MM'
     ChildSizing.LeftRightSpacing = 6
@@ -456,7 +457,7 @@ object Form1: TForm1
     ChildSizing.Layout = cclLeftToRightThenTopToBottom
     ChildSizing.ControlsPerLine = 1
     ClientHeight = 552
-    ClientWidth = 282
+    ClientWidth = 92
     Items.Strings = (
       'MQ00N'
       'MA11N'
@@ -485,10 +486,10 @@ object Form1: TForm1
     Visible = False
   end
   object ListeUEA2I: TRadioGroup
-    Left = 472
+    Left = 424
     Height = 560
-    Top = 47
-    Width = 288
+    Top = 32
+    Width = 98
     AutoFill = True
     Caption = 'UE A2I'
     ChildSizing.LeftRightSpacing = 6
@@ -499,7 +500,7 @@ object Form1: TForm1
     ChildSizing.Layout = cclLeftToRightThenTopToBottom
     ChildSizing.ControlsPerLine = 1
     ClientHeight = 530
-    ClientWidth = 284
+    ClientWidth = 94
     Items.Strings = (
       'SY02'
       'SY06'
@@ -522,8 +523,207 @@ object Form1: TForm1
       'RO02'
       'SY34'
     )
-    OnClick = ListeUEA2IClick
     TabOrder = 13
     Visible = False
+  end
+  object NF16: TPanel
+    Left = 600
+    Height = 444
+    Top = 48
+    Width = 519
+    ClientHeight = 444
+    ClientWidth = 519
+    TabOrder = 14
+    Visible = False
+    OnClick = NF16Click
+    object NomUE: TLabel
+      Left = 24
+      Height = 33
+      Top = 16
+      Width = 253
+      Caption = 'NF16 : Base de données'
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -28
+      Font.Name = 'Arial Narrow'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+      OnClick = NomUEClick
+    end
+    object Label2: TLabel
+      Left = 24
+      Height = 25
+      Top = 64
+      Width = 133
+      Caption = 'Sophie LORIETTE'
+      ParentColor = False
+    end
+    object Resultat: TComboBox
+      Left = 360
+      Height = 33
+      Top = 16
+      Width = 150
+      ItemHeight = 25
+      Items.Strings = (
+        'Moyenne'
+        'P18'
+        'A17'
+        'P17'
+        'A16'
+        'P16'
+        'A15'
+        'P15'
+        'A14'
+        'P14'
+        'A13'
+        'P13'
+        'A12'
+        'P12'
+        'A11'
+        'P11'
+        'A10'
+        'P10'
+        'A09'
+        'P09'
+        'A08'
+        'P08'
+      )
+      TabOrder = 0
+      Text = 'Resultat'
+    end
+    object Label3: TLabel
+      Left = 24
+      Height = 25
+      Top = 112
+      Width = 63
+      Caption = 'Effectif :'
+      ParentColor = False
+    end
+    object Label4: TLabel
+      Left = 280
+      Height = 25
+      Top = 112
+      Width = 71
+      Caption = 'Résultat :'
+      ParentColor = False
+      OnClick = Label4Click
+    end
+    object Label5: TLabel
+      Left = 280
+      Height = 25
+      Top = 368
+      Width = 113
+      Caption = 'Réussite : 60%'
+      ParentColor = False
+    end
+    object Label6: TLabel
+      Left = 280
+      Height = 25
+      Top = 400
+      Width = 212
+      Caption = 'Echec (dont abadon) : 40%'
+      ParentColor = False
+    end
+  end
+  object IF09: TPanel
+    Left = 776
+    Height = 444
+    Top = 392
+    Width = 519
+    ClientHeight = 444
+    ClientWidth = 519
+    TabOrder = 15
+    Visible = False
+    OnClick = NF16Click
+    object NomUE1: TLabel
+      Left = 24
+      Height = 33
+      Top = 16
+      Width = 313
+      Caption = 'IF09 : Système Documentaires'
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -28
+      Font.Name = 'Arial Narrow'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+      OnClick = NomUEClick
+    end
+    object Label7: TLabel
+      Left = 24
+      Height = 25
+      Top = 64
+      Width = 118
+      Caption = 'Aurélien BENEL'
+      ParentColor = False
+    end
+    object Resultat1: TComboBox
+      Left = 360
+      Height = 33
+      Top = 16
+      Width = 150
+      ItemHeight = 25
+      Items.Strings = (
+        'Moyenne'
+        'P18'
+        'A17'
+        'P17'
+        'A16'
+        'P16'
+        'A15'
+        'P15'
+        'A14'
+        'P14'
+        'A13'
+        'P13'
+        'A12'
+        'P12'
+        'A11'
+        'P11'
+        'A10'
+        'P10'
+        'A09'
+        'P09'
+        'A08'
+        'P08'
+      )
+      TabOrder = 0
+      Text = 'Resultat'
+    end
+    object Label8: TLabel
+      Left = 24
+      Height = 25
+      Top = 112
+      Width = 63
+      Caption = 'Effectif :'
+      ParentColor = False
+    end
+    object Label9: TLabel
+      Left = 280
+      Height = 25
+      Top = 112
+      Width = 71
+      Caption = 'Résultat :'
+      ParentColor = False
+      OnClick = Label4Click
+    end
+    object Label10: TLabel
+      Left = 280
+      Height = 25
+      Top = 368
+      Width = 113
+      Caption = 'Réussite : 87%'
+      ParentColor = False
+    end
+    object Label11: TLabel
+      Left = 280
+      Height = 25
+      Top = 400
+      Width = 212
+      Caption = 'Echec (dont abadon) : 13%'
+      ParentColor = False
+    end
   end
 end

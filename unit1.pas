@@ -18,16 +18,32 @@ type
     ComboBox3: TComboBox;
     ComboBox4: TComboBox;
     ComboBox5: TComboBox;
+    Label10: TLabel;
+    Label11: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    Label9: TLabel;
+    IF09: TPanel;
+    NomUE1: TLabel;
+    Resultat: TComboBox;
     Label1: TLabel;
-    ListeSemestre: TRadioGroup;   //Liste semestre
-    ListeUETC: TRadioGroup;   //Liste UE TC
-    ListeUEGI: TRadioGroup;
-    ListeUEMTE: TRadioGroup;
-    ListeUEGM: TRadioGroup;
-    ListeUEISI: TRadioGroup;
-    ListeUERT: TRadioGroup;
-    ListeUEA2I: TRadioGroup;
-    ListeUEMM: TRadioGroup;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    NomUE: TLabel;
+    ListeSemestre: TRadioGroup;   //Liste Semestre
+    ListeUETC: TRadioGroup;  //Liste UE TC
+    ListeUEGI: TRadioGroup;  //Liste UE GI
+    ListeUEMTE: TRadioGroup; //Liste UE MTE
+    ListeUEGM: TRadioGroup;  //Liste UE GM
+    ListeUEISI: TRadioGroup; //Liste UE ISI
+    ListeUERT: TRadioGroup;  //Liste UE RT
+    ListeUEA2I: TRadioGroup; //Liste UE A2I
+    ListeUEMM: TRadioGroup;  //Liste UE MM
+    NF16: TPanel;
+    Resultat1: TComboBox;
     Shape1: TShape;
     FondBleuClair: TShape;
     procedure ComboBox1Change(Sender: TObject);
@@ -35,6 +51,10 @@ type
     procedure ComboBox3Change(Sender: TObject);
     procedure ComboBox4Change(Sender: TObject);
     procedure ComboBox5Change(Sender: TObject);
+    procedure Label4Click(Sender: TObject);
+    procedure NomUEClick(Sender: TObject);
+    procedure ListeUEISIClick(Sender: TObject);
+    procedure NF16Click(Sender: TObject);
 
   private
 
@@ -64,6 +84,8 @@ begin
      Form1.ListeUEA2I.Visible:=False;
      Form1.ListeUEMM.Visible:=False;
      Form1.FondBleuClair.Visible:=False;
+     Form1.NF16.Visible:=False;
+     Form1.IF09.Visible:=False;
 
 end;
 
@@ -184,6 +206,44 @@ begin  //STATISTIQUE DE FLUX
        6: ; //GM
        7: ; //GI
   end;
+end;
+
+procedure TForm1.Label4Click(Sender: TObject);
+begin
+
+end;
+
+procedure TForm1.NomUEClick(Sender: TObject);
+begin
+
+end;
+
+
+procedure TForm1.ListeUEISIClick(Sender: TObject);
+begin
+  //Clear();
+  case ListeUEISI.ItemIndex of
+       0: begin
+          Clear();
+          ListeUEISI.Visible:=True;
+          FondBleuClair.Visible:=True;
+          NF16.Visible:=True;
+          end;
+       3: begin
+          Clear();
+          ListeUEISI.Visible:=True;
+          FondBleuClair.Visible:=True;
+          IF09.Visible:=True;
+          end;
+       else ShowMessage('Nous n avons pas encore d informations sur cette UE');
+  end;
+
+
+end;
+
+procedure TForm1.NF16Click(Sender: TObject);
+begin
+
 end;
 
 end.
