@@ -29,12 +29,13 @@ type
     ListeUEA2I: TRadioGroup;
     ListeUEMM: TRadioGroup;
     Shape1: TShape;
-    Shape2: TShape;
+    FondBleuClair: TShape;
     procedure ComboBox1Change(Sender: TObject);
     procedure ComboBox2Change(Sender: TObject);
     procedure ComboBox3Change(Sender: TObject);
     procedure ComboBox4Change(Sender: TObject);
     procedure ComboBox5Change(Sender: TObject);
+    procedure ListeUEA2IClick(Sender: TObject);
     procedure ListeUEGIClick(Sender: TObject);
 
   private
@@ -64,7 +65,7 @@ begin
      Form1.ListeUEMTE.Visible:=False;
      Form1.ListeUEA2I.Visible:=False;
      Form1.ListeUEMM.Visible:=False;
-     Form1.Shape2.Visible:=False;
+     Form1.FondBleuClair.Visible:=False;
 
 end;
 
@@ -74,33 +75,31 @@ begin //GESTION UE
   ComboBox3.Text:='Visualisation de la répartition des étudiants';
   ComboBox4.Text:='Gestion du semestre';
   ComboBox5.Text:='Statistique des flux';
+  Clear();
+  FondBleuClair.Visible:=True;
   case ComboBox1.ItemIndex of
        0: begin
-          Clear();
-          Shape2.Visible:=True;
-          ListeUETC.Visible:=True ; //TC
-       end ;
+          ListeUETC.Visible:=True ;
+       end; //TC
        1: begin
-          Clear();
-          Shape2.Visible:=True;
           ListeUEISI.Visible:=True;
        end; //ISI
-       2: Clear(); //RT
-       3: ; //A2I
-       4: ; //MM
+       2: begin
+          ListeUERT.Visible:=True;
+       end; //RT
+       3: begin
+          ListeUEA2I.Visible:=True;
+       end; //A2I
+       4: begin
+          ListeUEMM.Visible:=True;
+       end; //MM
        5: begin
-          Clear();
-          Shape2.Visible:=True;
           ListeUEMTE.Visible:=True;
        end; //MTE
        6: begin
-          Clear();
-          Shape2.Visible:=True;
           ListeUEGM.Visible:=True;
        end; //GM
        7: begin
-          Clear();
-          Shape2.Visible:=True;
           ListeUEGI.Visible:=True;
        end; //GI
   end;
@@ -112,6 +111,8 @@ begin  //GESTION ENSEIGNANTS
   ComboBox3.Text:='Visualisation de la répartition des étudiants';
   ComboBox4.Text:='Gestion du semestre';
   ComboBox5.Text:='Statistique des flux';
+
+  Clear();
     case ComboBox3.ItemIndex of
        0: ; //TC
        1: ; //ISI
@@ -130,8 +131,9 @@ begin  //VISUALISATION REPARTITION ETU
   ComboBox2.Text:='Gestion des enseignants';
   ComboBox4.Text:='Gestion du semestre';
   ComboBox5.Text:='Statistique des flux';
-    ListeSemestre.Visible:= True;
-    ListeUETC.Visible:=False;
+
+  Clear();
+  ListeSemestre.Visible:= True;
     case ComboBox1.ItemIndex of
        0: ; //TC
        1: ; //ISI
@@ -150,8 +152,9 @@ begin  //GESTION DU SEMESTRE
   ComboBox2.Text:='Gestion des enseignants';
   ComboBox3.Text:='Visualisation de la répartition des étudiants';
   ComboBox5.Text:='Statistique des flux';
-    ListeSemestre.Visible:= True;
-    ListeUETC.Visible:=False;
+
+  Clear();
+  ListeSemestre.Visible:= True;
     case ComboBox1.ItemIndex of
        0: ; //TC
        1: ; //ISI
@@ -170,8 +173,9 @@ begin  //STATISTIQUE DE FLUX
   ComboBox2.Text:='Gestion des enseignants';
   ComboBox3.Text:='Visualisation de la répartition des étudiants';
   ComboBox4.Text:='Gestion du semestre';
-    ListeSemestre.Visible:= True;
-    ListeUETC.Visible:=False;
+
+  Clear();
+  ListeSemestre.Visible:= True;
     case ComboBox1.ItemIndex of
        0: ; //TC
        1: ; //ISI
@@ -182,11 +186,6 @@ begin  //STATISTIQUE DE FLUX
        6: ; //GM
        7: ; //GI
   end;
-end;
-
-procedure TForm1.ListeUEGIClick(Sender: TObject);
-begin
-
 end;
 
 end.
