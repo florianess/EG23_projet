@@ -18,13 +18,18 @@ type
     ComboBox3: TComboBox;
     ComboBox4: TComboBox;
     ComboBox5: TComboBox;
+    Semestre: TComboBox;
+    Image1: TImage;
+    Image2: TImage;
     Label10: TLabel;
     Label11: TLabel;
+    Titre: TLabel;
     Label7: TLabel;
     Label8: TLabel;
     Label9: TLabel;
     IF09: TPanel;
     NomUE1: TLabel;
+    RepartitionISI: TPanel;
     Resultat: TComboBox;
     Label1: TLabel;
     Label2: TLabel;
@@ -51,10 +56,8 @@ type
     procedure ComboBox3Change(Sender: TObject);
     procedure ComboBox4Change(Sender: TObject);
     procedure ComboBox5Change(Sender: TObject);
-    procedure Label4Click(Sender: TObject);
-    procedure NomUEClick(Sender: TObject);
+    procedure ListeSemestreClick(Sender: TObject);
     procedure ListeUEISIClick(Sender: TObject);
-    procedure NF16Click(Sender: TObject);
 
   private
 
@@ -64,6 +67,7 @@ type
 
 var
   Form1: TForm1;
+  indexSemestre : integer;
 
 implementation
 
@@ -86,6 +90,7 @@ begin
      Form1.FondBleuClair.Visible:=False;
      Form1.NF16.Visible:=False;
      Form1.IF09.Visible:=False;
+     Form1.RepartitionISI.Visible:=False;
 
 end;
 
@@ -133,7 +138,7 @@ begin  //GESTION ENSEIGNANTS
   ComboBox5.Text:='Statistique des flux';
 
   Clear();
-    case ComboBox3.ItemIndex of
+    case ComboBox2.ItemIndex of
        0: ; //TC
        1: ; //ISI
        2: ; //RT
@@ -153,10 +158,9 @@ begin  //VISUALISATION REPARTITION ETU
   ComboBox5.Text:='Statistique des flux';
 
   Clear();
-  ListeSemestre.Visible:= True;
-    case ComboBox1.ItemIndex of
+    case ComboBox3.ItemIndex of
        0: ; //TC
-       1: ; //ISI
+       1: RepartitionISI.Visible:=True; //ISI
        2: ; //RT
        3: ; //A2I
        4: ; //MM
@@ -175,7 +179,7 @@ begin  //GESTION DU SEMESTRE
 
   Clear();
   ListeSemestre.Visible:= True;
-    case ComboBox1.ItemIndex of
+    case ComboBox4.ItemIndex of
        0: ; //TC
        1: ; //ISI
        2: ; //RT
@@ -196,7 +200,7 @@ begin  //STATISTIQUE DE FLUX
 
   Clear();
   ListeSemestre.Visible:= True;
-    case ComboBox1.ItemIndex of
+    case ComboBox5.ItemIndex of
        0: ; //TC
        1: ; //ISI
        2: ; //RT
@@ -208,16 +212,12 @@ begin  //STATISTIQUE DE FLUX
   end;
 end;
 
-procedure TForm1.Label4Click(Sender: TObject);
+procedure TForm1.ListeSemestreClick(Sender: TObject);
 begin
-
+  case ListeSemestre.ItemIndex of
+     0: indexSemestre:=0;
+  end;
 end;
-
-procedure TForm1.NomUEClick(Sender: TObject);
-begin
-
-end;
-
 
 procedure TForm1.ListeUEISIClick(Sender: TObject);
 begin
@@ -238,11 +238,6 @@ begin
        else ShowMessage('Nous n avons pas encore d informations sur cette UE');
   end;
 
-
-end;
-
-procedure TForm1.NF16Click(Sender: TObject);
-begin
 
 end;
 

@@ -1,14 +1,14 @@
 object Form1: TForm1
-  Left = 758
+  Left = 297
   Height = 1029
-  Top = 23
+  Top = 475
   Width = 1523
   Caption = 'Form1'
   ClientHeight = 1029
   ClientWidth = 1523
   DesignTimePPI = 144
   LCLVersion = '1.8.2.0'
-  WindowState = wsFullScreen
+  WindowState = wsMaximized
   object Shape1: TShape
     Left = 0
     Height = 805
@@ -220,6 +220,7 @@ object Form1: TForm1
       'A08'
       'P08'
     )
+    OnClick = ListeSemestreClick
     TabOrder = 6
     Visible = False
   end
@@ -535,7 +536,6 @@ object Form1: TForm1
     ClientWidth = 519
     TabOrder = 14
     Visible = False
-    OnClick = NF16Click
     object NomUE: TLabel
       Left = 24
       Height = 33
@@ -549,7 +549,6 @@ object Form1: TForm1
       Font.Quality = fqDraft
       ParentColor = False
       ParentFont = False
-      OnClick = NomUEClick
     end
     object Label2: TLabel
       Left = 24
@@ -607,7 +606,6 @@ object Form1: TForm1
       Width = 71
       Caption = 'Résultat :'
       ParentColor = False
-      OnClick = Label4Click
     end
     object Label5: TLabel
       Left = 280
@@ -627,15 +625,14 @@ object Form1: TForm1
     end
   end
   object IF09: TPanel
-    Left = 776
+    Left = 600
     Height = 444
-    Top = 392
+    Top = 48
     Width = 519
     ClientHeight = 444
     ClientWidth = 519
     TabOrder = 15
     Visible = False
-    OnClick = NF16Click
     object NomUE1: TLabel
       Left = 24
       Height = 33
@@ -649,7 +646,6 @@ object Form1: TForm1
       Font.Quality = fqDraft
       ParentColor = False
       ParentFont = False
-      OnClick = NomUEClick
     end
     object Label7: TLabel
       Left = 24
@@ -707,7 +703,6 @@ object Form1: TForm1
       Width = 71
       Caption = 'Résultat :'
       ParentColor = False
-      OnClick = Label4Click
     end
     object Label10: TLabel
       Left = 280
@@ -724,6 +719,75 @@ object Form1: TForm1
       Width = 212
       Caption = 'Echec (dont abadon) : 13%'
       ParentColor = False
+    end
+  end
+  object RepartitionISI: TPanel
+    Left = 560
+    Height = 444
+    Top = 48
+    Width = 520
+    ClientHeight = 444
+    ClientWidth = 520
+    TabOrder = 16
+    Visible = False
+    object Titre: TLabel
+      Left = 104
+      Height = 33
+      Top = 32
+      Width = 289
+      Caption = 'Répartition étudiant ISI - P18'
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -28
+      Font.Name = 'Arial Narrow'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object Image1: TImage
+      Left = 24
+      Height = 152
+      Top = 96
+      Width = 303
+    end
+    object Image2: TImage
+      Left = 24
+      Height = 152
+      Top = 272
+      Width = 303
+    end
+    object ComboBox6: TComboBox
+      Left = 352
+      Height = 33
+      Top = 96
+      Width = 150
+      ItemHeight = 25
+      Items.Strings = (
+        'Moyenne'
+        'P18'
+        'A17'
+        'P17'
+        'A16'
+        'P16'
+        'A15'
+        'P15'
+        'A14'
+        'P14'
+        'A13'
+        'P13'
+        'A12'
+        'P12'
+        'A11'
+        'P11'
+        'A10'
+        'P10'
+        'A09'
+        'P09'
+        'A08'
+        'P08'
+      )
+      TabOrder = 0
+      Text = 'ComboBox6'
     end
   end
 end
