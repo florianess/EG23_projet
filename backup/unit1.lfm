@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 297
+  Left = 99
   Height = 1029
-  Top = 475
+  Top = 289
   Width = 1523
   Caption = 'Form1'
   ClientHeight = 1029
@@ -756,7 +756,7 @@ object Form1: TForm1
       Top = 272
       Width = 303
     end
-    object ComboBox6: TComboBox
+    object Semestre: TComboBox
       Left = 352
       Height = 33
       Top = 96
@@ -786,8 +786,109 @@ object Form1: TForm1
         'A08'
         'P08'
       )
+      Style = csDropDownList
       TabOrder = 0
-      Text = 'ComboBox6'
+    end
+  end
+  object GestionEtudiantISI: TPanel
+    Left = 520
+    Height = 444
+    Top = 48
+    Width = 560
+    ClientHeight = 444
+    ClientWidth = 560
+    TabOrder = 17
+    Visible = False
+    object TriGestion: TComboBox
+      Left = 384
+      Height = 33
+      Top = 40
+      Width = 150
+      ItemHeight = 25
+      Items.Strings = (
+        'Retard simple'
+        'Retard critique'
+        'Candidature à l’excellence'
+      )
+      TabOrder = 0
+      Text = 'TriGestion'
+    end
+    object Label12: TLabel
+      Left = 80
+      Height = 25
+      Top = 40
+      Width = 208
+      Caption = 'Gestion des étudiants - ISI'
+      ParentColor = False
+    end
+    object Image3: TImage
+      Left = 40
+      Height = 304
+      Top = 112
+      Width = 480
+    end
+  end
+  object StatistiqueFlux: TPanel
+    Left = 520
+    Height = 442
+    Top = 48
+    Width = 625
+    ClientHeight = 442
+    ClientWidth = 625
+    TabOrder = 18
+    Visible = False
+    object TriStatistique: TComboBox
+      Left = 424
+      Height = 33
+      Top = 32
+      Width = 150
+      ItemHeight = 25
+      Items.Strings = (
+        'Moyenne'
+        'P18'
+        'A17'
+        'P17'
+        'A16'
+        'P16'
+        'A15'
+        'P15'
+        'A14'
+        'P14'
+        'A13'
+        'P13'
+        'A12'
+        'P12'
+        'A11'
+        'P11'
+        'A10'
+        'P10'
+        'A09'
+        'P09'
+        'A08'
+        'P08'
+      )
+      TabOrder = 0
+      Text = 'TriStatistique'
+    end
+    object NameFlux: TLabel
+      Left = 56
+      Height = 37
+      Top = 24
+      Width = 289
+      Caption = 'Statistique de Flux - P18'
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -32
+      Font.Name = 'Arial Narrow'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+    end
+    object Image4: TImage
+      Left = 40
+      Height = 320
+      Top = 88
+      Width = 488
     end
   end
 end

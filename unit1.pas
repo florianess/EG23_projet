@@ -18,6 +18,14 @@ type
     ComboBox3: TComboBox;
     ComboBox4: TComboBox;
     ComboBox5: TComboBox;
+    Image4: TImage;
+    NameFlux: TLabel;
+    TriStatistique: TComboBox;
+    Image3: TImage;
+    Label12: TLabel;
+    StatistiqueFlux: TPanel;
+    TriGestion: TComboBox;
+    GestionEtudiantISI: TPanel;
     Semestre: TComboBox;
     Image1: TImage;
     Image2: TImage;
@@ -91,6 +99,8 @@ begin
      Form1.NF16.Visible:=False;
      Form1.IF09.Visible:=False;
      Form1.RepartitionISI.Visible:=False;
+     Form1.GestionEtudiantISI.Visible:=False;
+     Form1.StatistiqueFlux.Visible:=False;
 
 end;
 
@@ -178,10 +188,10 @@ begin  //GESTION DU SEMESTRE
   ComboBox5.Text:='Statistique des flux';
 
   Clear();
-  ListeSemestre.Visible:= True;
+  //ListeSemestre.Visible:= True;
     case ComboBox4.ItemIndex of
        0: ; //TC
-       1: ; //ISI
+       1: GestionEtudiantISI.Visible:=True ; //ISI
        2: ; //RT
        3: ; //A2I
        4: ; //MM
@@ -199,10 +209,9 @@ begin  //STATISTIQUE DE FLUX
   ComboBox4.Text:='Gestion du semestre';
 
   Clear();
-  ListeSemestre.Visible:= True;
     case ComboBox5.ItemIndex of
        0: ; //TC
-       1: ; //ISI
+       1: StatistiqueFlux.Visible:=True; //ISI
        2: ; //RT
        3: ; //A2I
        4: ; //MM
