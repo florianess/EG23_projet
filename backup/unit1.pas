@@ -209,7 +209,6 @@ begin  //STATISTIQUE DE FLUX
   ComboBox4.Text:='Gestion du semestre';
 
   Clear();
-  ListeSemestre.Visible:= True;
     case ComboBox5.ItemIndex of
        0: ; //TC
        1: StatistiqueFlux.Visible:=True; //ISI
