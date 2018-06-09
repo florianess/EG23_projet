@@ -18,13 +18,13 @@ type
     ComboBox3: TComboBox;
     ComboBox4: TComboBox;
     ComboBox5: TComboBox;
+    TriStatistique: TComboBox;
     Image4: TImage;
     Image5: TImage;
     Image6: TImage;
     Image7: TImage;
     Label13: TLabel;
     NameFlux: TLabel;
-    TriStatistique: TComboBox;
     Image3: TImage;
     Label12: TLabel;
     StatistiqueFlux: TPanel;
@@ -33,14 +33,7 @@ type
     Semestre: TComboBox;
     Image1: TImage;
     Image2: TImage;
-    Label10: TLabel;
-    Label11: TLabel;
     Titre: TLabel;
-    Label7: TLabel;
-    Label8: TLabel;
-    Label9: TLabel;
-    IF09: TPanel;
-    NomUE1: TLabel;
     RepartitionISI: TPanel;
     Resultat: TComboBox;
     Label1: TLabel;
@@ -60,7 +53,6 @@ type
     ListeUEA2I: TRadioGroup; //Liste UE A2I
     ListeUEMM: TRadioGroup;  //Liste UE MM
     NF16: TPanel;
-    Resultat1: TComboBox;
     Shape1: TShape;
     FondBleuClair: TShape;
     procedure ComboBox1Change(Sender: TObject);
@@ -68,9 +60,6 @@ type
     procedure ComboBox3Change(Sender: TObject);
     procedure ComboBox4Change(Sender: TObject);
     procedure ComboBox5Change(Sender: TObject);
-    procedure Image5Click(Sender: TObject);
-    procedure Image6Click(Sender: TObject);
-    procedure ListeSemestreClick(Sender: TObject);
     procedure ListeUEISIClick(Sender: TObject);
 
   private
@@ -103,15 +92,16 @@ begin
      Form1.ListeUEMM.Visible:=False;
      Form1.FondBleuClair.Visible:=False;
      Form1.NF16.Visible:=False;
-     Form1.IF09.Visible:=False;
      Form1.RepartitionISI.Visible:=False;
      Form1.GestionEtudiantISI.Visible:=False;
      Form1.StatistiqueFlux.Visible:=False;
 
 end;
 
-procedure TForm1.ComboBox1Change(Sender: TObject);
-begin //GESTION UE
+
+
+procedure TForm1.ComboBox1Change(Sender: TObject); //GESTION UE
+begin
   ComboBox2.Text:='Gestion des enseignants';
   ComboBox3.Text:='Visualisation de la répartition des étudiants';
   ComboBox4.Text:='Gestion du semestre';
@@ -146,8 +136,23 @@ begin //GESTION UE
   end;
 end;
 
-procedure TForm1.ComboBox2Change(Sender: TObject);
-begin  //GESTION ENSEIGNANTS
+procedure TForm1.ListeUEISIClick(Sender: TObject); // Affichage de la fiche de l'UE NF16
+begin
+  case ListeUEISI.ItemIndex of
+       0: begin
+          Clear();
+          ListeUEISI.Visible:=True;
+          FondBleuClair.Visible:=True;
+          NF16.Visible:=True;
+          end;
+       else ShowMessage('Nous n avons pas encore d informations sur cette UE');
+  end;
+end;
+
+
+
+procedure TForm1.ComboBox2Change(Sender: TObject); //GESTION ENSEIGNANTS
+begin
   ComboBox1.Text:='Gestion des UE';
   ComboBox3.Text:='Visualisation de la répartition des étudiants';
   ComboBox4.Text:='Gestion du semestre';
@@ -166,8 +171,11 @@ begin  //GESTION ENSEIGNANTS
   end;
 end;
 
-procedure TForm1.ComboBox3Change(Sender: TObject);
-begin  //VISUALISATION REPARTITION ETU
+
+
+
+procedure TForm1.ComboBox3Change(Sender: TObject); //VISUALISATION REPARTITION ETU
+begin
   ComboBox1.Text:='Gestion des UE';
   ComboBox2.Text:='Gestion des enseignants';
   ComboBox4.Text:='Gestion du semestre';
@@ -175,16 +183,13 @@ begin  //VISUALISATION REPARTITION ETU
 
   Clear();
     case ComboBox3.ItemIndex of
-       0: ; //TC
        1: RepartitionISI.Visible:=True; //ISI
-       2: ; //RT
-       3: ; //A2I
-       4: ; //MM
-       5: ; //MTE
-       6: ; //GM
-       7: ; //GI
+       else ShowMessage('Nous n avons pas encore d informations sur la répartition demandée');
   end;
 end;
+
+
+
 
 procedure TForm1.ComboBox4Change(Sender: TObject);
 begin  //GESTION DU SEMESTRE
@@ -194,21 +199,17 @@ begin  //GESTION DU SEMESTRE
   ComboBox5.Text:='Statistique des flux';
 
   Clear();
-  //ListeSemestre.Visible:= True;
-    case ComboBox4.ItemIndex of
-       0: ; //TC
+  case ComboBox4.ItemIndex of
        1: GestionEtudiantISI.Visible:=True ; //ISI
-       2: ; //RT
-       3: ; //A2I
-       4: ; //MM
-       5: ; //MTE
-       6: ; //GM
-       7: ; //GI
+       else ShowMessage('Nous n avons pas encore d informations sur la gestion de ce cursus');
   end;
 end;
 
-procedure TForm1.ComboBox5Change(Sender: TObject);
-begin  //STATISTIQUE DE FLUX
+
+
+
+procedure TForm1.ComboBox5Change(Sender: TObject); //STATISTIQUE DE FLUX
+begin
   ComboBox1.Text:='Gestion des UE';
   ComboBox2.Text:='Gestion des enseignants';
   ComboBox3.Text:='Visualisation de la répartition des étudiants';
@@ -216,55 +217,9 @@ begin  //STATISTIQUE DE FLUX
 
   Clear();
     case ComboBox5.ItemIndex of
-       0: ; //TC
        1: StatistiqueFlux.Visible:=True; //ISI
-       2: ; //RT
-       3: ; //A2I
-       4: ; //MM
-       5: ; //MTE
-       6: ; //GM
-       7: ; //GI
+       else ShowMessage('Nous n avons pas encore les statistiques demandées');
   end;
 end;
-
-procedure TForm1.Image5Click(Sender: TObject);
-begin
-
-end;
-
-procedure TForm1.Image6Click(Sender: TObject);
-begin
-
-end;
-
-procedure TForm1.ListeSemestreClick(Sender: TObject);
-begin
-  case ListeSemestre.ItemIndex of
-     0: indexSemestre:=0;
-  end;
-end;
-
-procedure TForm1.ListeUEISIClick(Sender: TObject);
-begin
-  //Clear();
-  case ListeUEISI.ItemIndex of
-       0: begin
-          Clear();
-          ListeUEISI.Visible:=True;
-          FondBleuClair.Visible:=True;
-          NF16.Visible:=True;
-          end;
-       3: begin
-          Clear();
-          ListeUEISI.Visible:=True;
-          FondBleuClair.Visible:=True;
-          IF09.Visible:=True;
-          end;
-       else ShowMessage('Nous n avons pas encore d informations sur cette UE');
-  end;
-
-
-end;
-
 end.
 
