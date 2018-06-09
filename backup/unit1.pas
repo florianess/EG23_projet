@@ -19,6 +19,9 @@ type
     ComboBox4: TComboBox;
     ComboBox5: TComboBox;
     Image4: TImage;
+    Image5: TImage;
+    Image6: TImage;
+    Image7: TImage;
     NameFlux: TLabel;
     TriStatistique: TComboBox;
     Image3: TImage;
@@ -64,6 +67,8 @@ type
     procedure ComboBox3Change(Sender: TObject);
     procedure ComboBox4Change(Sender: TObject);
     procedure ComboBox5Change(Sender: TObject);
+    procedure Image5Click(Sender: TObject);
+    procedure Image6Click(Sender: TObject);
     procedure ListeSemestreClick(Sender: TObject);
     procedure ListeUEISIClick(Sender: TObject);
 
@@ -219,6 +224,16 @@ begin  //STATISTIQUE DE FLUX
        6: ; //GM
        7: ; //GI
   end;
+end;
+
+procedure TForm1.Image5Click(Sender: TObject);
+begin
+
+end;
+
+procedure TForm1.Image6Click(Sender: TObject);
+begin
+
 end;
 
 procedure TForm1.ListeSemestreClick(Sender: TObject);

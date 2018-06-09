@@ -22,6 +22,7 @@ type
     Image5: TImage;
     Image6: TImage;
     Image7: TImage;
+    Label13: TLabel;
     NameFlux: TLabel;
     TriStatistique: TComboBox;
     Image3: TImage;
