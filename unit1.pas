@@ -64,7 +64,6 @@ type
     ScrollBar2: TScrollBar;
     StatsFlux: TButton;
     TCbu: TRadioButton;
-    TriStatistique: TComboBox;
     Image4: TImage;
     Image5: TImage;
     Image6: TImage;
@@ -117,6 +116,7 @@ type
     procedure ListeUEISIClick(Sender: TObject);
     procedure MTEbuChange(Sender: TObject);
     procedure NameFluxClick(Sender: TObject);
+    procedure RepartitionISIClick(Sender: TObject);
     procedure RepEtuClick(Sender: TObject);
     procedure RTbuChange(Sender: TObject);
     procedure A2IbuChange(Sender: TObject);
@@ -179,6 +179,7 @@ begin
           ListeUEISI.Visible:=True;
           FondBleuClair.Visible:=True;
           NF16.Visible:=True;
+          ScrollBar2.Visible:=True;
           end;
        else ShowMessage('Nous n avons pas encore d informations sur cette UE');
   end;
@@ -190,6 +191,11 @@ begin
 end;
 
 procedure TForm1.NameFluxClick(Sender: TObject);
+begin
+
+end;
+
+procedure TForm1.RepartitionISIClick(Sender: TObject);
 begin
 
 end;

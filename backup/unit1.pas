@@ -179,6 +179,7 @@ begin
           ListeUEISI.Visible:=True;
           FondBleuClair.Visible:=True;
           NF16.Visible:=True;
+          ScrollBar2.Visible:=True;
           end;
        else ShowMessage('Nous n avons pas encore d informations sur cette UE');
   end;
