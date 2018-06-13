@@ -18,6 +18,16 @@ type
     Button2: TButton;
     Button3: TButton;
     Button4: TButton;
+    Button5: TButton;
+    Button6: TButton;
+    Button7: TButton;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Edit3: TEdit;
+    Edit4: TEdit;
+    Edit5: TEdit;
+    Edit6: TEdit;
+    Edit7: TEdit;
     GestUE: TButton;
     GestEns: TButton;
     GIbu: TRadioButton;
@@ -28,14 +38,25 @@ type
     Image9: TImage;
     ISIbu: TRadioButton;
     Label10: TLabel;
+    Label11: TLabel;
+    Label14: TLabel;
+    Label15: TLabel;
+    Label16: TLabel;
+    Label17: TLabel;
+    Label18: TLabel;
+    Label19: TLabel;
+    Label20: TLabel;
+    Label21: TLabel;
     Label7: TLabel;
     Label8: TLabel;
     Label9: TLabel;
     MTEbu: TRadioButton;
     NameEns: TLabel;
+    OpenDialog1: TOpenDialog;
     Panel1: TPanel;
     Panel2: TPanel;
     Panel3: TPanel;
+    AjouterEnseignant: TPanel;
     RepEtu: TButton;
     GestSeme: TButton;
     RTbu: TRadioButton;
@@ -80,6 +101,9 @@ type
     Shape1: TShape;
     FondBleuClair: TShape;
     TriPole: TComboBox;
+    procedure Button4Click(Sender: TObject);
+    procedure Button6Click(Sender: TObject);
+    procedure Button7Click(Sender: TObject);
     procedure GestEnsClick(Sender: TObject);
     procedure GestSemeClick(Sender: TObject);
     procedure GestUEClick(Sender: TObject);
@@ -141,6 +165,7 @@ begin
      Form1.NameEns.Visible:=False;
      Form1.TriPole.Visible:=False;
      Form1.ScrollBar2.Visible:=False;
+     Form1.AjouterEnseignant.Visible:=False;
 
 end;
 
@@ -226,6 +251,29 @@ begin
      Form1.Button4.Visible:=True;
      Form1.NameEns.Visible:=True;
      Form1.TriPole.Visible:=True;
+end;
+
+procedure TForm1.Button7Click(Sender: TObject);
+var
+  filename: string;
+begin
+
+
+if OpenDialog1.Execute then
+   begin
+        filename := OpenDialog1.Filename;
+        Button7.Caption:=OpenDialog1.FileName;
+   end;
+end;
+
+procedure TForm1.Button6Click(Sender: TObject);
+begin
+  AjouterEnseignant.Visible:=False;
+end;
+
+procedure TForm1.Button4Click(Sender: TObject);
+begin
+  AjouterEnseignant.Visible:=True;
 end;
 
 procedure TForm1.GestSemeClick(Sender: TObject);
